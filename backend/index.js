@@ -69,7 +69,7 @@ app.post('/api/contact-message', async (req, res) => {
         // })
 
         await new Promise((resolve, reject) => {
-            transporter.sendMail(mailData, (err, info) => {
+            transporter.sendMail(mailOptions, (err, info) => {
               if (err) {
                 console.error(err);
                 reject(err);
