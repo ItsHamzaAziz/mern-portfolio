@@ -41,6 +41,9 @@ app.post('/api/contact-message', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: process.env.SENDER_EMAIL_SERVICE,
             host: process.env.SENDER_EMAIL_HOST,
+            tls: {
+                ciphers: "SSLv3",
+            },
             port: 587,
             secure: false,
             auth: {
