@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const SkillsAccordian = () => {
   return (
-    <div className='w-3/4 mx-auto mt-16'>
+    <div className='w-4/5 sm:w-3/4 mx-auto mt-16'>
       <Accordion className='bg-gray-800 text-white'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
@@ -16,7 +16,7 @@ const SkillsAccordian = () => {
           Frontend
         </AccordionSummary>
         <AccordionDetails>
-          React JS, Tailwind CSS, Bootstrap, Ajax, HTML, CSS & JavaScript
+          React JS, Tailwind CSS, Bootstrap & Ajax
         </AccordionDetails>
       </Accordion>
 
@@ -29,7 +29,7 @@ const SkillsAccordian = () => {
           Backend
         </AccordionSummary>
         <AccordionDetails>
-          Node JS, Express, Django & Django Rest Framework
+          Node JS, Express, Django & Django REST Framework
         </AccordionDetails>
       </Accordion>
 
@@ -42,7 +42,7 @@ const SkillsAccordian = () => {
           Database
         </AccordionSummary>
         <AccordionDetails>
-          MongoDB, MySQL, SQL Server & SQLite
+          MongoDB, MySQL, MS SQL Server & SQLite
         </AccordionDetails>
       </Accordion>
 

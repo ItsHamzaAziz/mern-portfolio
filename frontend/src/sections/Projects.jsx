@@ -12,7 +12,7 @@ const Projects = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 laptop:grid-cols-3 gap-10 mt-16 w-3/4 mx-auto'>
             <SingleProject
               title={'Blogs App'}
-              description={'This web application provides a platform for users to create, read, update and delete blog posts. Each blog post has a title, summary, image and blog content.For this users have to first go through authentication process which is acheived using JSON Web Tokens or simply JWT. Moreover I also added a rich text editor React Quill so that users can add content in their desired format.'}
+              description={'This web application was developed using MERN stack. It provides a platform for users to create, read, update and delete blog posts. Each blog post has a title, summary, image and blog content. For this users have to first go through authentication process which is acheived using JSON Web Tokens or simply JWT. Moreover I also added a rich text editor React Quill so that users can add content in their desired format.'}
               githubLink={'https://github.com/ItsHamzaAziz/BlogsAppMERN'}
               className='border-2 border-red-600 rounded-3xl hover:shadow-lg hover:shadow-red-600 p-8 cursor-pointer flex flex-col justify-between'
             />
