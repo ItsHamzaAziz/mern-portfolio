@@ -9,11 +9,9 @@ dotenv.config()
 
 const app = express()
 
-const frontEndUrl = process.env.FRONTEND_URL
-
 app.use(express.json())
 app.use(cors({
-    origin: frontEndUrl,
+    origin: process.env.FRONTEND_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }))
