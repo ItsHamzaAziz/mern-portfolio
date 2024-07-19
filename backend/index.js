@@ -15,7 +15,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }))
-// app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -61,13 +60,6 @@ app.post('/api/contact-message', async (req, res) => {
             text: `Message from ${name} having email ${email}.\n\n${message}`
         }
 
-        // transporter.sendMail(mailOptions, function(error, info){
-        //     if (error) {
-        //       console.log(error)
-        //       return res.status(201).json('Failed to send email')
-        //     }
-        // })
-
         await new Promise((resolve, reject) => {
             transporter.sendMail(mailOptions, (err, info) => {
               if (err) {
@@ -79,9 +71,9 @@ app.post('/api/contact-message', async (req, res) => {
             });
         })
     
-        res.json('Your message is recorded')
+        res.json('Your message is sent')
     } catch (error) {
-        res.status(500).json('Cannot record message')
+        res.status(500).json('Cannot send message')
     }
 })
 
