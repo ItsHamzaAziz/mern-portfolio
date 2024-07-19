@@ -17,7 +17,7 @@
                 "DELETE"
             ],
             "headers": {
-                "Access-Control-Allow-Origin": "https://mern-portfolio-front-git-4a8e5b-hamzaaziz086-gmailcoms-projects.vercel.app",
+                "Access-Control-Allow-Origin": "https://mern-portfolio-frontend-mzybfe05g.vercel.app",
                 "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
                 "Access-Control-Allow-Headers": "Content-Type"
             }
