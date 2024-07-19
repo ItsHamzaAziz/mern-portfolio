@@ -10,20 +10,24 @@ dotenv.config()
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin: process.env.FRONTEND_URL,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}))
 
-app.options("*", cors({
+const corsOptions = {
     origin: process.env.FRONTEND_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}))
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}
+
+app.use(cors(corsOptions))
+
+app.options('*', cors(corsOptions))
 
 mongoose.connect(process.env.MONGODB_URI)
 
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
 app.post('/api/contact-message', async (req, res) => {
     try {
