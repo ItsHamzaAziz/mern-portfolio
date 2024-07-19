@@ -9,7 +9,6 @@ dotenv.config()
 
 const app = express()
 
-app.use(express.json())
 
 const corsOptions = {
     origin: process.env.FRONTEND_URL,
@@ -22,6 +21,7 @@ app.use(cors(corsOptions))
 
 app.options('*', cors(corsOptions))
 
+app.use(express.json())
 mongoose.connect(process.env.MONGODB_URI)
 
 
