@@ -90,9 +90,11 @@ const Contact = () => {
                     placeholder='Your Message'
                     value={message}
                     onChange={e => setMessage(e.target.value)}
-                    className='mt-5 w-full px-4 py-2 rounded-lg focus:outline-none text-black'
+                    className='mt-5 w-full h-20 px-4 py-2 rounded-lg focus:outline-none text-black'
                     required
                 />
+
+                <p className='text-center text-sm mt-3'>I will be notified of your message by an email. I'll respond to the email you provided.</p>
 
                 <button type='submit' className='mt-5 bg-blue-700 text-gray-200 w-full px-6 py-2 rounded-lg flex items-center justify-center space-x-2 h-10'>
                     {
