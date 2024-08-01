@@ -8,14 +8,14 @@ import Footer from './sections/Footer'
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <Projects />
       <Skills />
       <Contact />
       <Footer />
-    </div>
+    </>
   )
 }
 
